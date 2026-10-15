@@ -16,7 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["payer"])) {
         "currency"    => "XOF",
         "ref_command" => "TEST-" . time(),
         "command_name"=> "Paiement de test",
-        "env"         => "test"
+        "env"         => "test",
+        
+"ipn_url"     => "https://test-pay-0zuw.onrender.com/?ipn=1",
+"success_url" => "https://test-pay-0zuw.onrender.com/?state=success",
+"cancel_url"  => "https://test-pay-0zuw.onrender.com/?state=cancel"
+
     ];
 
     $ch = curl_init(
