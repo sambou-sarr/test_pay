@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["payer"])) {
 
     $data = [
         "item_name"   => "Produit de test",
-        "item_price"  => 100,
+        "item_price"  => 200,
         "currency"    => "XOF",
         "ref_command" => "TEST-" . time(),
         "command_name"=> "Paiement de test",
